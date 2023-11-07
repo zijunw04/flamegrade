@@ -17,7 +17,7 @@ const Professors = () => {
     <>
       <div className="w-screen h-screen overflow-hidden flex flex-wrap">
         <div>
-          <div className="w-screen p-10 text-center text-5xl">Professors: </div>
+          <div className="mt-20 w-screen p-10 text-center text-5xl">Professors: </div>
           <div className="flex m-5 border shadow-2xl">
             <div className="flex flex-col pl-9 items-start gap-3 justify-center">
               <div className="">

@@ -72,5 +72,68 @@ export const coursesData = [
     }
   },
 
-
-];  
+  {
+    name: "Computer Science",
+    id: "CS",
+    classes:{
+      CS151:{
+        name:"Foundations of Computing",
+        classNum: "CS151",
+        professor: {
+          anastasiossidiropoulos:{
+            professorName:"Sidiropoulos, Anastasios",
+            professorPhoto: "https://cs.uic.edu/wp-content/uploads/sites/110/2018/06/Anastasios-Sidiropoulos-157x180.jpg",
+            professorID:"anastasiossidiropoulos",
+            TotalGrade: "172",
+            AGrade: "51",
+            BGrade: "60",
+            CGrade: "46",
+            DGrade: "6",
+            FGrade: "3",
+            WithDrew: "0"
+          },
+          evanmccarty:{
+            professorName:"McCarty, Evan",
+            professorPhoto: "https://cs.uic.edu/wp-content/uploads/sites/110/2018/06/Evan-McCarty-CS__1-157x180.jpg",
+            professorID:"evanmccarty",
+            TotalGrade: "244",
+            AGrade: "95",
+            BGrade: "78",
+            CGrade: "46",
+            DGrade: "5",
+            FGrade: "7",
+            WithDrew: "0"
+          }
+        }
+      },
+      CS141:{
+        name:"Program Design II",
+        classNum: "CS141",
+        professor: {
+          gradasst:{
+            professorName:"Grad Asst",
+            professorID:"gradasst",
+            TotalGrade: "96",
+            AGrade: "34",
+            BGrade: "26",
+            CGrade: "21",
+            DGrade: "5",
+            FGrade: "6",
+            WithDrew: "0"
+          },
+          davidphayes:{
+            professorName:"Hayes, David P",
+            professorID:"davidphayes",
+            TotalGrade: "312",
+            AGrade: "81",
+            BGrade: "95",
+            CGrade: "59",
+            DGrade: "19",
+            FGrade: "31",
+            WithDrew: "0"
+          }
+        }
+      }
+    }
+  }
+];

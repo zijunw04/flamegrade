@@ -12,9 +12,8 @@ const Courses = () => {
 
   return (
     <>
-      <div>
-        <div>
-          <div className="flex m-5 border shadow-2xl">
+        <div className="w-screen h-screen overflow-hidden">
+          <div className="mt-20 w-screen flex m-5 border shadow-2xl">
             <div className="flex w-screen p-10 flex-col gap-3 justify-center">
               <span className="font-semibold font-sans text-center text-4xl">
                 {course.name}
@@ -26,14 +25,15 @@ const Courses = () => {
 
             <div className="mt-5">
             {classNumbers.map(classNum => (
+              <div className="mt-5 p-5 border-r-black border-b-2">
               <Link key={classNum} to={`/courses/${course.id}/${course.classes[classNum].classNum}`}>
                 <span className="font-sans font-semibold">{course.classes[classNum].classNum}</span>
               </Link>
+              </div>
             ))}
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
