@@ -2,6 +2,7 @@ import React from "react";
 import { coursesData } from "./data/coursesData";
 import { Link } from "react-router-dom";
 import Hero from "./components/hero";
+import NewStudentPop from "./components/newstudentpop";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       {/* Products */}
       <div className="w-screen h-screen overflow-hidden">
         <Hero/>
+        <NewStudentPop/>
         <div className="flex flex-wrap m-10 gap-11">
           
           <div className="w-screen text-center text-5xl">Courses by Category</div>
