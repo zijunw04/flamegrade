@@ -18,7 +18,7 @@ const ProfessorGrade = () => {
       <div className="mt-20 flex m-5 border py-5 shadow-2xl w-full justify-between">
         <div className="flex flex-col pl-9 items-start gap-3 justify-center">
           <span className="font-semibold font-sans text-2xl">
-            Professor Name: {professor.professorName}
+            Professor. {professor.professorName}
           </span>
           <span className="font-sans">
             Professor ID: {professor.professorID}

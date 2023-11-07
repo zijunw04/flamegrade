@@ -23,7 +23,7 @@ const Courses = () => {
           <div className="bg-white border flex flex-wrap p-5 shadow-xl">
             <span className="font-bold text-xl w-screen">Classes:</span>
 
-            <div className="mt-5">
+            <div className="mt-5 flex flex-wrap">
             {classNumbers.map(classNum => (
               <div className="mt-5 p-5 border-r-black border-b-2">
               <Link key={classNum} to={`/courses/${course.id}/${course.classes[classNum].classNum}`}>

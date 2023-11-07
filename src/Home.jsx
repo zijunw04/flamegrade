@@ -13,16 +13,20 @@ const Home = () => {
           
           <div className="w-screen text-center text-5xl">Courses by Category</div>
             {coursesData.map((item, ind) => (
-              <div
-                className="w-[200px] h-[50px] shadow-lg  text-center rounded-2xl border cursor-pointer "
+              <Link
+                className="w-[250px] h-[70px] shadow-[5px_5px_0px_0px_rgba(0,0,0)] hover:scale-110 text-center grid grid-cols-4 gap-0  border cursor-pointer "
                 key={ind}
-              >
-                <div className="flex flex-col gap-2 w-full h-full">
-                  <Link className="mt-3" to={`/courses/${item.id}`}>
-                    <span className="font-sans font-semibold ">{item.name}</span>
-                  </Link>
+                to={`/courses/${item.id}`} >
+                <div className="w-[70px]">
+                <img alt="" src={item.image} className="h-[50px] w-[50px] mt-3 object-contain ml-2"></img>
                 </div>
-              </div>
+                
+                <div className=" flex w-[180px] justify-center h-full">
+                  <div className="pt-5" >
+                    <span className="font-sans font-semibold ">{item.name}</span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
       </div>
