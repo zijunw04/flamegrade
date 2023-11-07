@@ -14,8 +14,7 @@ const Home = () => {
             className="max-w-[250px] shadow-lg rounded-2xl border cursor-pointer"
             key={ind}
           >
-            <div className="flex flex-col gap-2 p-3">
-                  {/* Link component added */}
+            <div className="flex flex-col gap-2 px-16 py-4">
               <Link to={`/courses/${item.id}`}>
                 <span className="font-sans font-semibold">{item.name}</span>
               </Link>
