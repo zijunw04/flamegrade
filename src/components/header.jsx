@@ -2,11 +2,18 @@ import React from "react";
 
 export default function Header() {
   return(
-    <div className="absolute w-screen flex justify-between items- p-4 bg-UICRed z-10">
+    <div className=" w-full flex justify-between items-center p-5 bg-UICRed z-10 overflow-hidden">
       <a href="/" className="text-xl text-UICWhite">FlameGrades</a>
+      <div >
+        <a href="https://uic.edu" target="_blanks" className="flex text-center items-center">
+          <img src="https://chicago.medicine.uic.edu/wp-content/uploads/2018/04/CAMP.CIRC_.LG_.WHT_.png" alt="" className="h-[54px] w-[54px] mt-[2px] "></img>
+          <p className="text-UICWhite font-sans font-normal ml-2">University of <p className="font-bold">Illinois Chicago</p></p>
+        </a>
+      </div>
       <div className="flex">
-        <a href="https://uic.collegescheduler.com/entry" target="_blanks" className="text-xl text-UICWhite mr-5">Start Planning</a>
-        <a href="https://uic.edu" target="_blanks"><img src="https://chicago.medicine.uic.edu/wp-content/uploads/2018/04/CAMP.CIRC_.LG_.WHT_.png" alt="" className="h-[28px] w-[28px] mt-[2px] "></img></a>
+        <a href="https://uic.collegescheduler.com/entry" target="_blanks" className="text-xl text-UICWhite mr-5">Register</a>
+        <a href="/" target="_blanks" className="text-xl text-UICWhite mr-5">Contact</a>
+        
       </div>
     </div>
   )

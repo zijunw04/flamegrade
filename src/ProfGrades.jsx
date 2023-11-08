@@ -24,25 +24,33 @@ const ProfessorGrade = () => {
             Professor ID: {professor.professorID}
           </span>
           <span className="font-sans">
-            Total Grades: {professor.TotalGrade}
+            Total Student Graded: {professor.TotalGrade}
           </span>
           <span className="font-sans">
-            A: {professor.AGrade}
+            A: {professor.APercentage}
           </span>
           <span className="font-sans">
-            B: {professor.BGrade}
+            B: {professor.BPercentage}
           </span>
           <span className="font-sans">
-            C: {professor.CGrade}
+            C: {professor.CPercentage}
           </span>
           <span className="font-sans">
-            D: {professor.DGrade}
+            D: {professor.DPercentage}
           </span>
           <span className="font-sans">
-            F: {professor.FGrade}
+            F: {professor.FPercentage}
+          </span>
+          <span className="font-sans">
+            GPA: {professor.GPA}
+          </span>
+          <span className="font-sans">
+            Withdrew: {professor.WithDrew}
           </span>
         </div>
-        <img alt="" className="w-[300px] h-[300px] mr-9" src={professor.professorPhoto}></img>
+        <div className="">
+          <img alt="" className="border-UICBlue border-8 rounded-full w-[300px] h-[300px] mr-9  object-cover " src={professor.professorPhoto}></img>
+        </div>
       </div>
     </div>
   );

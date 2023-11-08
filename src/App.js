@@ -8,7 +8,7 @@ import Header from "./components/header";
 
 const App = () => {
   return (
-    <>
+    <div className="w-full overflow-x-hidden">
     <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/courses/:id/:classNum" element={<Professors />} />
         <Route path="/courses/:id/:classNum/:professorID" element={<ProfGrade />} />
       </Routes>
-    </>
+    </div>
   );
 };
 
