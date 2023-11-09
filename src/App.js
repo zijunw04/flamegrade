@@ -8,6 +8,9 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 const App = () => {
+
+  
+
   return (
     <div className="w-full overflow-x-hidden">
     <Header/>
