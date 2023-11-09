@@ -15,7 +15,7 @@ const Professors = () => {
 
   return (
     <>
-      <div className="w-screen h-screen overflow-hidden flex flex-wrap">
+      <div className="w-screen min-h-screen overflow-hidden flex flex-wrap">
         <div>
           <div className="mt-20 w-screen p-10 text-center text-5xl">Professors: </div>
           <div className="flex m-5 border shadow-2xl">
@@ -24,7 +24,9 @@ const Professors = () => {
                 {Object.keys(professors).map(professorKey => (
                   <div className="p-5 border-r-black border-b-2" key={professorKey}>
                     <Link key={professorKey} to={`/courses/${course.id}/${course.classes[classNum].classNum}/${professors[professorKey].professorID}`}>
-                      <span className="font-sans font-semibold">{professors[professorKey].professorName}</span>
+                      <span className="font-sans font-semibold">{professors[professorKey].professorName}
+                      </span>
+                      <span className="ml-5" >Average GPA: {professors[professorKey].GPA}</span>
                     </Link>
                   </div>
                 ))}

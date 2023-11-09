@@ -9,9 +9,13 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCourses = coursesData.filter(item => {
-    const cleanedSearchTerm = searchTerm.replace(/\d/g, "").toLowerCase(); 
-    return item.name.toLowerCase().includes(cleanedSearchTerm);
-  });
+  const cleanedSearchTerm = searchTerm.replace(/\d/g, "").toLowerCase(); 
+  return (
+    item.name.toLowerCase().includes(cleanedSearchTerm) ||
+    item.id.toLowerCase().includes(cleanedSearchTerm)
+  );
+});
+
 
   const displayedCourses = filteredCourses.slice(0, 8); // Limit to first 10 items
 

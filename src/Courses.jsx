@@ -7,33 +7,44 @@ const Courses = () => {
   const { id } = params;
   const course = coursesData.find((item) => item.id === id);
 
-  // Assuming you have an array of class numbers for the current course
   const classNumbers = Object.keys(course.classes);
+
+  const levels = {};
+
+  classNumbers.forEach((classNum) => {
+    const classInfo = course.classes[classNum];
+    const level = classInfo.level;
+    if (!levels[level]) {
+      levels[level] = [];
+    }
+    levels[level].push(classInfo);
+  });
 
   return (
     <>
-        <div className="w-screen h-screen overflow-hidden">
-          <div className="mt-20 w-screen flex m-5 border shadow-2xl">
-            <div className="flex w-screen p-10 flex-col gap-3 justify-center">
-              <span className="font-semibold font-sans text-center text-4xl">
-                {course.name}
-              </span>
-            </div>
-          </div>
-          <div className="bg-white border flex flex-wrap p-5 shadow-xl">
-            <span className="font-bold text-xl w-screen">Classes:</span>
+      <div className="w-screen h-screen overflow-hidden">
+        {/* ... */}
+        <div className="bg-white border p-5 shadow-xl">
+          <span className="font-bold text-xl mb-5 block text-center">Classes:</span>
 
-            <div className="mt-5 flex flex-wrap">
-            {classNumbers.map(classNum => (
-              <div className="mt-5 p-5 border-r-black border-b-2">
-              <Link key={classNum} to={`/courses/${course.id}/${course.classes[classNum].classNum}`}>
-                <span className="font-sans font-semibold">{course.classes[classNum].classNum}</span>
-              </Link>
+          <div className="flex flex-wrap justify-between">
+            {Object.keys(levels).map((level) => (
+              <div key={level} className="mb-5 w-screen mx-auto flex ">
+                <div className="flex flex-wrap items-center  mb-2">
+                  <h2 className="text-xl font-bold mr-2">{level} Level</h2>
+                  {levels[level].map((classInfo) => (
+                    <div key={classInfo.classNum} className="p-5 border-r-black border-b-2 text-center">
+                      <Link to={`/courses/${course.id}/${classInfo.classNum}`}>
+                        <span className="font-sans font-semibold">{classInfo.classNum}</span>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
-            </div>
           </div>
         </div>
+      </div>
     </>
   );
 };

@@ -5,6 +5,12 @@ import math
 def clean_special_characters(text):
     return re.sub(r"[^a-zA-Z0-9]+", "", text)
 
+def get_course_level(course_number):
+    numeric_part = int(''.join(filter(str.isdigit, course_number)))
+    level = math.floor(numeric_part / 100) * 100
+    return level
+
+
 def process_csv_file(input_file, subjects_data):
     with open(input_file, newline='', encoding='latin-1') as csvfile:
         data = csv.DictReader(csvfile)
@@ -17,17 +23,19 @@ def process_csv_file(input_file, subjects_data):
             coursedetail = row["SUBJECT NAME"]
             course_number = row['CRS NBR']
             course_title = row['CRS TITLE']
-            professor_name = clean_special_characters(row['Primary Instructor']).strip()  # Remove leading/trailing spaces
-            if not professor_name:  # Check if professor name is empty
+            professor_name = clean_special_characters(row['Primary Instructor']).strip()
+            if not professor_name:
                 continue
             professor_name2 = row['Primary Instructor']
-            a_grade = int(row['A'].rstrip('%'))  # Convert and remove percentage sign
+            a_grade = int(row['A'].rstrip('%'))
             b_grade = int(row['B'].rstrip('%'))
             c_grade = int(row['C'].rstrip('%'))
             d_grade = int(row['D'].rstrip('%'))
             f_grade = int(row['F'].rstrip('%'))
             withdrew = int(row['W'])
             department_name = row['DEPT NAME']
+
+            course_level = get_course_level(course_number)
 
             subject = subjects_data.setdefault(coursedetail, {
                 'name': coursedetail,
@@ -45,7 +53,8 @@ def process_csv_file(input_file, subjects_data):
                 department_courses[course_id] = {
                     'name': course_title,
                     'classNum': course_id,
-                    'professor': {}
+                    'level': course_level,
+                    'professor': {},
                 }
 
             course_professors = department_courses[course_id]['professor']
@@ -74,7 +83,6 @@ def process_csv_file(input_file, subjects_data):
                 existing_professor = course_professors[professor_id]
                 existing_professor['TotalGrade'] += total_grade
                 
-                # Modify grade percentages
                 existing_professor['AGrade'] += a_grade
                 existing_professor['BGrade'] += b_grade
                 existing_professor['CGrade'] += c_grade
@@ -88,10 +96,6 @@ def process_csv_file(input_file, subjects_data):
                 existing_professor['DPercentage'] = round(existing_professor['DGrade'] / existing_professor['TotalGrade'] * 100)
                 existing_professor['FPercentage'] = round(existing_professor['FGrade'] / existing_professor['TotalGrade'] * 100)
                 existing_professor['WithDrew'] = round(existing_professor['WithDrew'] / existing_professor['TotalGrade'] * 100)
-
-def get_numeric_part(classNum):
-    numeric_part = ''.join(filter(str.isdigit, classNum))
-    return int(numeric_part)
 
 def convert_csv_to_txt(input_files, output_file):
     subjects_data = {}  
@@ -108,12 +112,13 @@ def convert_csv_to_txt(input_files, output_file):
             txtfile.write(f"    image: \"{subject['image']}\",\n")
             txtfile.write("    classes: {\n")
 
-            sorted_classes = sorted(subject['classes'].values(), key=lambda x: get_numeric_part(x['classNum']))  # Sort by CRS NBR
+            sorted_classes = sorted(subject['classes'].values(), key=lambda x: (x['level'], x['classNum']))  # Sort by level and CRS NBR
             
             for class_info in sorted_classes:
                 txtfile.write(f"      {class_info['classNum']}: {{\n")
                 txtfile.write(f"        name: \"{class_info['name']}\",\n")
                 txtfile.write(f"        classNum: \"{class_info['classNum']}\",\n")
+                txtfile.write(f"        level: \"{class_info['level']}\",\n")
                 txtfile.write("        professor: {\n")
                 for prof_id, prof_info in class_info['professor'].items():
                     txtfile.write(f"          {prof_id}: {{\n")
@@ -142,5 +147,5 @@ def convert_csv_to_txt(input_files, output_file):
         txtfile.write("]\n")
 
 # Usage:
-input_files = ['spring2023.csv', 'fall2022.csv', 'spring2022.csv', 'fall2021.csv']  # Add all the CSV file names
+input_files = ['spring2023.csv', 'fall2022.csv', 'spring2022.csv', 'fall2021.csv', 'spring2021.csv', 'fall2020.csv', 'spring2020.csv', 'fall2019.csv','spring2019.csv', 'fall2018.csv', 'spring2018.csv', 'fall2017.csv', 'spring2017.csv', 'fall2016.csv', 'spring2016.csv', 'fall2015.csv']  
 convert_csv_to_txt(input_files, 'output.txt')
