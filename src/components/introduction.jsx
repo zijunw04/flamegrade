@@ -8,7 +8,7 @@ export default function Introduction() {
               Introduction</h1>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Affiliation</span>
-            <span className=" text-base text-black  ">This website is NOT affiliated with University of Illinois Chicago.</span>
+            <span className=" text-base text-black  ">This website is NOT affiliated with University of Illinois Chicago. Also this website is still in development so there are many errors.</span>
           </div>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Data</span>

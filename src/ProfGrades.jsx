@@ -16,12 +16,12 @@ const ProfessorGrade = () => {
   return (
     <div className="w-full min-h-screen  overflow-hidden px-[20%] ">
       <div className="mt-20 flex border justify-center min-h-screen py-6  px-6 flex-wrap">
-        <div className="mt-4 flex py-5  lg:w-[350px] lg:h-[350px] sm:w-[300px] w-[100px] ">
-            <img alt="" className="border-UICBlue  border-8 rounded-full lg:w-[300px] lg:h-[300px] sm:w-[300px] sm:h-[300px] w-[150px] h-[150px] object-cover " src={`/images/${professor.professorID}.png`}></img>
+        <div className="mt-4 flex py-5   ">
+            <img alt="" className="border-UICBlue  border-8  rounded-3xl lg:w-[300px] lg:h-[300px] sm:w-[300px] sm:h-[300px] w-[150px] h-[150px] object-cover " src={`/images/${professor.professorID}.png`}></img>
         </div>
         <div className="mt-2 flex py-5 max-w-[1000px] ">
           <div className="flex flex-col pl-9  gap-3 font-sans ">
-            <span className="font-semibold font-sans text-4xl">
+            <span className="font-semibold font-sans lg:text-4xl text-3xl">
               Professor. {professor.professorName}
             </span>
             <span className="font-normal  text-2xl">

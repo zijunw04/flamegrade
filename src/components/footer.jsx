@@ -11,7 +11,9 @@ export default function Footer() {
                 </div>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0">
                     <li>
-                        <a href="/" class="mr-4 hover:underline md:mr-6 ">Register</a>
+                        <a href="https://www.ratemyprofessors.com/" target="_blanks" className="mr-4 hover:underline md:mr-6 ">RateMyProfessor</a>
+                        <a href="https://uic.collegescheduler.com/entry" target="_blanks" className="mr-4 hover:underline md:mr-6 ">Register</a>
+                        <a href="/" target="_blanks" className="mr-4 hover:underline md:mr-6 ">Contact</a>
                     </li>
                 </ul>
             </div>

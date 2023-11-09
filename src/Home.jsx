@@ -27,8 +27,8 @@ const Home = () => {
         <NewStudentPop/>
         
         <div className="flex flex-wrap justify-center px-[20%] gap-11 mt-16 mb-10">
-          <div className="w-screen flex-wrap text-center items-center grid grid-cols-2">
-            <p className="text-2xl">Courses by Departments</p>
+          <div className="w-screen flex flex-wrap lg:justify-between gap-5 justify-center text-center items-center ">
+            <p className=" text-2xl">Courses by Departments</p>
             <div className="">
               <input
                 type="text"
