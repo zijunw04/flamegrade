@@ -22,7 +22,7 @@ const Courses = () => {
 
   return (
     <>
-      <div className="w-screen h-screen overflow-hidden">
+      <div className="w-screen min-h-screen overflow-hidden">
         {/* ... */}
         <div className="bg-white border p-5 shadow-xl">
           <span className="font-bold text-xl mb-5 block text-center">Classes:</span>
