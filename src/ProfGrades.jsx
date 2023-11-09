@@ -21,12 +21,6 @@ const ProfessorGrade = () => {
             Professor. {professor.professorName}
           </span>
           <span className="font-sans">
-            Professor ID: {professor.professorID}
-          </span>
-          <span className="font-sans">
-            Total Student Graded: {professor.TotalGrade}
-          </span>
-          <span className="font-sans">
             A: {professor.APercentage}
           </span>
           <span className="font-sans">
@@ -42,10 +36,10 @@ const ProfessorGrade = () => {
             F: {professor.FPercentage}
           </span>
           <span className="font-sans">
-            GPA: {professor.GPA}
+            Average Class GPA: {professor.GPA}
           </span>
           <span className="font-sans">
-            Withdrew: {professor.WithDrew}
+            Withdrew: {professor.WPercentage}
           </span>
         </div>
         <div className="">

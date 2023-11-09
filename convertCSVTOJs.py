@@ -89,6 +89,10 @@ def process_csv_file(input_file, subjects_data):
                 existing_professor['FPercentage'] = round(existing_professor['FGrade'] / existing_professor['TotalGrade'] * 100)
                 existing_professor['WithDrew'] = round(existing_professor['WithDrew'] / existing_professor['TotalGrade'] * 100)
 
+def get_numeric_part(classNum):
+    numeric_part = ''.join(filter(str.isdigit, classNum))
+    return int(numeric_part)
+
 def convert_csv_to_txt(input_files, output_file):
     subjects_data = {}  
 
@@ -103,8 +107,11 @@ def convert_csv_to_txt(input_files, output_file):
             txtfile.write(f"    id: \"{subject['id']}\",\n")
             txtfile.write(f"    image: \"{subject['image']}\",\n")
             txtfile.write("    classes: {\n")
-            for class_id, class_info in subject['classes'].items():
-                txtfile.write(f"      {class_id}: {{\n")
+
+            sorted_classes = sorted(subject['classes'].values(), key=lambda x: get_numeric_part(x['classNum']))  # Sort by CRS NBR
+            
+            for class_info in sorted_classes:
+                txtfile.write(f"      {class_info['classNum']}: {{\n")
                 txtfile.write(f"        name: \"{class_info['name']}\",\n")
                 txtfile.write(f"        classNum: \"{class_info['classNum']}\",\n")
                 txtfile.write("        professor: {\n")

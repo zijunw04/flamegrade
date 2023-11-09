@@ -5,6 +5,7 @@ import Courses from "./Courses";
 import Professors from "./Professors";
 import ProfGrade from "./ProfGrades";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/courses/:id/:classNum" element={<Professors />} />
         <Route path="/courses/:id/:classNum/:professorID" element={<ProfGrade />} />
       </Routes>
+    <Footer/>
     </div>
   );
 };
