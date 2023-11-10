@@ -32,16 +32,16 @@ const Home = () => {
             <div className="">
               <input
                 type="text"
-                placeholder="Search by Courses (ex. ENGL)"
+                placeholder="Search by Courses (ex. ENGL/English)"
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="px-3 py-2 border w-[250px] border-gray-300 rounded-md"
+                className="px-3 py-2 border w-[250px] border-gray-300 rounded-md text-sm"
               />
             </div>
           </div>
           {displayedCourses.map((item, ind) => (
             <Link
-              className="w-[250px] h-[70px] shadow-[5px_5px_0px_0px_rgba(0,0,0)] hover:scale-110 text-center grid grid-cols-4 gap-0  border cursor-pointer "
+              className="w-[250px] h-[100px] shadow-[5px_5px_0px_0px_rgba(0,0,0)] hover:scale-110 text-center grid grid-cols-4 gap-0  border cursor-pointer "
               key={ind}
               to={`/courses/${item.id}`} >
               <div className="w-[70px]">
@@ -49,8 +49,9 @@ const Home = () => {
               </div>
               
               <div className=" flex w-[180px] justify-center h-full">
-                <div className="pt-5" >
-                  <span className="font-sans font-semibold ">{item.name}</span>
+                <div className="pt-5 flex flex-col" >
+                  <span className="font-sans font-semibold text-sm">{item.name}</span>
+                  <span className="font-sans font-semibold text-sm">&#40;{item.id}&#41;</span>
                 </div>
               </div>
             </Link>

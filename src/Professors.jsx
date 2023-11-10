@@ -25,7 +25,7 @@ const Professors = () => {
                 {Object.keys(professors).map(professorKey => (
                   <div className="w-[300px] mx-auto my-10 bg-white rounded-lg shadow-md p-5" key={professorKey}>
                     <Link key={professorKey} to={`/courses/${course.id}/${course.classes[classNum].classNum}/${professors[professorKey].professorID}`} className="">
-                      <img class="w-32 h-32 rounded-full mx-auto object-cover" src={`/images/${professors[professorKey].professorID}.png`} alt=""></img>
+                      <img class="w-32 h-32 rounded-full mx-auto object-cover" src={`/images/professorPhoto/${professors[professorKey].professorID}.png`} alt=""></img>
                       <h2 class="text-center text-2xl font-semibold mt-3">{professors[professorKey].professorName}</h2>
                       <p class="text-center text-gray-600 mt-1">Average GPA: {professors[professorKey].GPA}</p>
 

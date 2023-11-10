@@ -17,7 +17,7 @@ const ProfessorGrade = () => {
     <div className="w-full min-h-screen  overflow-hidden px-[20%] ">
       <div className="mt-20 flex border justify-center min-h-screen py-6  px-6 flex-wrap">
         <div className="mt-4 flex py-5   ">
-            <img alt="" className="border-UICBlue  border-8  rounded-3xl lg:w-[300px] lg:h-[300px] sm:w-[300px] sm:h-[300px] w-[150px] h-[150px] object-cover " src={`/images/${professor.professorID}.png`}></img>
+            <img alt="" className="border-UICBlue  border-8  rounded-3xl lg:w-[300px] lg:h-[300px] sm:w-[300px] sm:h-[300px] w-[150px] h-[150px] object-cover " src={`/images/professorPhoto/${professor.professorID}.png`}></img>
         </div>
         <div className="mt-2 flex py-5 max-w-[1000px] ">
           <div className="flex flex-col pl-9  gap-3 font-sans ">
