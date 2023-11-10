@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flamegrade/static/css/main.12be60e4.css",
+    "main.js": "/flamegrade/static/js/main.3ca039b0.js",
+    "index.html": "/flamegrade/index.html",
+    "main.12be60e4.css.map": "/flamegrade/static/css/main.12be60e4.css.map",
+    "main.3ca039b0.js.map": "/flamegrade/static/js/main.3ca039b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12be60e4.css",
+    "static/js/main.3ca039b0.js"
+  ]
+}
