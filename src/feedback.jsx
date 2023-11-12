@@ -74,7 +74,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-white min-h-screen w-screen">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-ChicagoBlue ">Feedback</h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-black  sm:text-xl">
