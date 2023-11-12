@@ -2,6 +2,7 @@ import React from "react";
 import { coursesData } from "./data/coursesData";
 import { useParams, Link } from "react-router-dom";
 
+
 const Courses = () => {
   const params = useParams();
   const { id } = params;
@@ -44,7 +45,9 @@ const Courses = () => {
             ))}
           </div>
         </div>
+        
       </div>
+      
     </>
   );
 };

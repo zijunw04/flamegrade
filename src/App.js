@@ -8,6 +8,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import AllCourses from "./AllCourse";
 import GenEdCourses from "./gened";
+import ContactPage from "./feedback";
 
 const App = () => {
 
@@ -23,8 +24,10 @@ const App = () => {
           <Route path="/courses/:id/:classNum/:professorID" element={<ProfGrade />} />
           <Route path="/courses" element={<AllCourses />} />
           <Route path="/gened" element={<GenEdCourses />} />
+          <Route path="/feedback" element={<ContactPage />} />
         </Routes>
       <Footer/>
+
     </div>
   );
 };

@@ -19,7 +19,7 @@ export default function Header() {
         </a>
 
         <div
-          className={`flex flex-col fixed top-0 right-0 h-full w-[70%] lg:w-[30%] sm:w-[35%] bg-red-500 text-white shadow-lg px-4 transform origin-right transition-transform ${menuOpen ? 'opacity-100 translate-x-[0%] transition-all' : 'opacity-0 translate-x-[100%] transition-all flex'}`}
+          className={`flex flex-col fixed top-0 right-0 h-full w-[70%] lg:w-[30%] sm:w-[35%] bg-UICRed text-white shadow-lg px-4 transform origin-right transition-transform ${menuOpen ? 'opacity-100 translate-x-[0%] transition-all' : 'opacity-0 translate-x-[100%] transition-all flex'}`}
         >
           <div className="w-full flex justify-center text-center lg:text-2xl text-xl mt-8">
             <h1 onClick={closeMenu} className=" cursor-pointer hover:scale-110">Flame Grades &times;</h1>
@@ -28,6 +28,7 @@ export default function Header() {
             <a href="/" className={`w-[200px] text-xl block py-2 opacity-0 hover:underline hover:animate-pulse   transform translate-y-2 transition duration-300 delay-100 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Home</a>
             <a href="/courses" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-200 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>All Courses</a>
             <a href="/gened" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-300 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Gen Ed Courses</a>
+            <a href="/feedback" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-200 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Feedback</a>
           </div>
         </div>
       </div>
