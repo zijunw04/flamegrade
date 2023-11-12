@@ -41,7 +41,7 @@ const Home = () => {
             <option value="">Select Category</option>
             {coursesData.map((course) => (
               <option key={course.id} value={course.id}>
-                {course.name}
+                {course.id}
               </option>
             ))}
           </select>
