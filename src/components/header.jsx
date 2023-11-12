@@ -25,10 +25,10 @@ export default function Header() {
             <h1 onClick={closeMenu} className=" cursor-pointer hover:scale-110">Flame Grades &times;</h1>
           </div>
           <div className="flex flex-col justify-start gap-9 mt-10">
-            <a href="/" className={`w-[200px] text-xl block py-2 opacity-0 hover:underline hover:animate-pulse   transform translate-y-2 transition duration-300 delay-100 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Home</a>
-            <a href="/courses" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-200 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>All Courses</a>
-            <a href="/gened" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-300 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Gen Ed Courses</a>
-            <a href="/feedback" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-200 ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Feedback</a>
+            <a href="/" className={`w-[200px] text-xl block py-2 opacity-0 hover:underline hover:animate-pulse   transform translate-y-2 transition duration-300 delay-[200ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Home</a>
+            <a href="/courses" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[400ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>All Courses</a>
+            <a href="/gened" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[600ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Gen Ed Courses</a>
+            <a href="/feedback" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[800ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Feedback</a>
           </div>
         </div>
       </div>
