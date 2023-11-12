@@ -126,13 +126,18 @@ const GenEdCourses = () => {
           </div>
           {/* Display courses in a grid */}
           <div className="w-full mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredCourses.map((course) => (
-              <div key={course.classNum} className="border p-4">
-                <p className="font-bold">{course.classNum}</p>
-                <p>{course.className}</p>
-                <p>Average GPA: {course.averageGPA.toFixed(2)}</p>
-              </div>
-            ))}
+          {filteredCourses.map((course) => {
+
+              const categoryPrefix = course.classNum.replace(/\d+/g, '');
+
+              return (
+                <a href={`/courses/${categoryPrefix}/${course.classNum}`} key={course.classNum} className="border p-4">
+                  <p className="font-bold">{course.classNum}</p>
+                  <p>{course.className}</p>
+                  <p>Average GPA: {course.averageGPA.toFixed(2)}</p>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

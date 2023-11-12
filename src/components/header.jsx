@@ -45,7 +45,7 @@ export default function Header() {
 
       <div className="items-center flex justify-end z-[-1]">
         <div onClick={toggleMenu} className="cursor-pointer transition duration-300 transform hover:-translate-x-1 text-center">
-          <img alt="" className="h-[54px] w-[54px]" src={`/images/logo.png`}/>
+          <img alt="" className="h-[54px] w-[54px]" src='/images/logo.png'/>
           <p className=" text-UICWhite font-bold" >Menu</p>
         </div>
       </div>
