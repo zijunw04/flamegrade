@@ -8,7 +8,7 @@ export default function Introduction() {
               Introduction</h1>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">READ</span>
-            <span className=" text-base text-black  ">This website is NOT affiliated with University of Illinois Chicago. The information provided on this website is intended solely for informational purposes and should not be the sole determinant in your course selection. I strongly recommend looking at additional sources, such as <a href="/">Rate My Professor</a>, for a more comprehensive and personalized review of specific professors. Making well-informed decisions regarding your courses is crucial to ensuring a fulfilling academic experience. </span>
+            <span className=" text-base text-black  ">This website is NOT affiliated with University of Illinois Chicago. The information provided on this website is intended solely for informational purposes and should not be the sole determinant in your course selection. I strongly recommend looking at additional sources, such as <a href="https://www.ratemyprofessors.com/" className="underline text-ChicagoBlue">Rate My Professor</a>, for a more comprehensive and personalized review of specific professors. Making well-informed decisions regarding your courses is crucial to ensuring a fulfilling academic experience. </span>
           </div>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Data</span>
@@ -16,7 +16,7 @@ export default function Introduction() {
           </div>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Contribution</span>
-            <span className=" text-base text-black  ">This is a open source project by <a href="https://www.linkedin.com/in/zi-jun-wang/" target="_blanks" className="text-ChicagoBlue underline">Zi Jun Wang</a>. If you are interested in contributing to the advancement of this project, you are encouraged to explore the  <a href="https://github.com/floatsinkfc/flamegrade" target="_blanks" className="text-ChicagoBlue underline">repository here</a>.</span>
+            <span className=" text-base text-black  ">This is a open source project by <a href="https://www.linkedin.com/in/zi-jun-wang/" target="_blanks" className="text-ChicagoBlue underline">Zi Jun Wang</a>. If you are interested in contributing to the advancement of this project, you are encouraged to explore the  <a href="https://github.com/floatsinkfc/flamegrade" target="_blanks" className="text-ChicagoBlue underline">repository here</a>. I would love to hear a feedback from those who use this website! <a href="/feedback" className="text-ChicagoBlue underline">Submit a Feedback</a></span>
           </div>
 
     </div>

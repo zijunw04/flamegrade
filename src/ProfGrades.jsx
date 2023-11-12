@@ -60,43 +60,43 @@ const ProfessorGrade = () => {
 
             <div className="flex items-center">
               <span className="w-20">A:</span>
-              <div className="relative w-full h-6 bg-white border border-gray-300">
-                <div className={`absolute h-full bg-blue-400`} style={{ width: `${professor.APercentage}` }}></div>
+              <div className="relative w-full h-6 bg-white border border-gray-300 rounded-3xl">
+                <div className={`absolute h-full bg-blue-400 rounded-3xl`} style={{ width: `${professor.APercentage}` }}></div>
               </div>
             </div>
 
             <div className="flex items-center">
               <span className="w-20">B:</span>
-              <div className="relative w-full h-6 bg-white border border-gray-300">
-                <div className={`absolute h-full bg-blue-400`} style={{ width: `${professor.BPercentage}` }}></div>
+              <div className="relative w-full h-6 bg-white border border-gray-300 rounded-3xl">
+                <div className={`absolute h-full bg-blue-400 rounded-3xl`} style={{ width: `${professor.BPercentage}` }}></div>
               </div>
             </div>
 
             <div className="flex items-center">
               <span className="w-20">C:</span>
-              <div className="relative w-full h-6 bg-white border border-gray-300">
-                <div className={`absolute h-full bg-blue-400`} style={{ width: `${professor.CPercentage}` }}></div>
+              <div className="relative w-full h-6 bg-white border border-gray-300 rounded-3xl">
+                <div className={`absolute h-full bg-blue-400 rounded-3xl`} style={{ width: `${professor.CPercentage}` }}></div>
               </div>
             </div>
 
             <div className="flex items-center">
               <span className="w-20">D:</span>
-              <div className="relative w-full h-6 bg-white border border-gray-300">
-                <div className={`absolute h-full bg-blue-400`} style={{ width: `${professor.DPercentage}` }}></div>
+              <div className="relative w-full h-6 bg-white border border-gray-300 rounded-3xl">
+                <div className={`absolute h-full bg-blue-400 rounded-3xl` } style={{ width: `${professor.DPercentage}` }}></div>
               </div>
             </div>
 
             <div className="flex items-center">
               <span className="w-20">F:</span>
-              <div className="relative w-full h-6 bg-white border border-gray-300">
-                <div className={`absolute h-full bg-blue-400`} style={{ width: `${professor.FPercentage}` }}></div>
+              <div className="relative w-full h-6 bg-white border border-gray-300 rounded-3xl">
+                <div className={`absolute h-full bg-blue-400 rounded-3xl`} style={{ width: `${professor.FPercentage}` }}></div>
               </div>
             </div>
 
             <div className="flex items-center">
               <span className="w-20">W:</span>
-              <div className="relative w-full h-6 bg-white border border-gray-300">
-                <div className={`absolute h-full bg-blue-400`} style={{ width: `${professor.WPercentage}` }}></div>
+              <div className="relative w-full h-6 bg-white border border-gray-300 rounded-3xl">
+                <div className={`absolute h-full bg-blue-400 rounded-3xl`} style={{ width: `${professor.WPercentage}` }}></div>
               </div>
             </div>
             
