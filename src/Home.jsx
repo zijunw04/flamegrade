@@ -1,61 +1,97 @@
 import React, { useState } from "react";
 import { coursesData } from "./data/coursesData";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Hero from "./components/hero";
 import NewStudentPop from "./components/newstudentpop";
 import Introduction from "./components/introduction";
 
 const Home = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("");
+  const [selectedCourseNumber, setSelectedCourseNumber] = useState("");
+  const [selectedProfessor, setSelectedProfessor] = useState("");
+  const navigate = useNavigate();
 
-  const filteredCourses = coursesData.filter(item => {
-  const cleanedSearchTerm = searchTerm.replace(/\d/g, "").toLowerCase(); 
-  return (
-    item.name.toLowerCase().includes(cleanedSearchTerm) ||
-    item.id.toLowerCase().includes(cleanedSearchTerm)
-  );
-});
-
-
-  const displayedCourses = filteredCourses.slice(0, 8); // Limit to first 10 items
+  const handleSearch = () => {
+    if (selectedCourse && selectedCourseNumber && selectedProfessor) {
+      const link = `/courses/${selectedCourse}/${selectedCourseNumber}/${selectedProfessor}`;
+      navigate(link);
+    } else {
+      alert("Please select all options");
+    }
+  };
 
   return (
     <>
-      <div className="w-full min-h-screen overflow-hidden">
-        <Hero/>
-        <Introduction/>
-        <NewStudentPop/>
-        
-        <div className="flex flex-wrap justify-center px-[20%] gap-11 mt-16 mb-10">
-          <div className="w-screen flex flex-wrap lg:justify-between gap-5 justify-center text-center items-center ">
-            <p className=" text-2xl">Courses by Departments</p>
-            <div className="">
-              <input
-                type="text"
-                placeholder="Search by Courses (ex. ENGL/English)"
-                value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                className="px-3 py-2 border w-[250px] border-gray-300 rounded-md text-sm"
-              />
-            </div>
-          </div>
-          {displayedCourses.map((item, ind) => (
-            <Link
-              className="w-[250px] h-[100px] shadow-[5px_5px_0px_0px_rgba(0,0,0)] hover:scale-110 text-center grid grid-cols-4 gap-0  border cursor-pointer "
-              key={ind}
-              to={`/courses/${item.id}`} >
-              <div className="w-[70px]">
-                <img alt="" src={item.image} className="h-[50px] w-[50px] mt-3 object-contain ml-2"></img>
-              </div>
-              
-              <div className=" flex w-[180px] justify-center h-full">
-                <div className="pt-5 flex flex-col" >
-                  <span className="font-sans font-semibold text-sm">{item.name}</span>
-                  <span className="font-sans font-semibold text-sm">&#40;{item.id}&#41;</span>
-                </div>
-              </div>
-            </Link>
-          ))}
+      <Hero/>
+      <Introduction/>
+      <NewStudentPop/>
+
+      <div className="w-full px-[20%] p-6 flex flex-col items-center mb-9 ">
+        <h2 className="text-center text-3xl text-ChicagoBlue">Quick Search</h2>
+        <div className="flex flex-wrap gap-4 justify-center mt-4">
+          <select
+            className="px-3 py-2 border w-[200px] border-gray-300 rounded-md text-sm"
+            value={selectedCourse}
+            onChange={(e) => {
+              setSelectedCourse(e.target.value);
+              setSelectedCourseNumber("");
+              setSelectedProfessor("");
+            }}
+          >
+            <option value="">Select Category</option>
+            {coursesData.map((course) => (
+              <option key={course.id} value={course.id}>
+                {course.name}
+              </option>
+            ))}
+          </select>
+          <select
+            className="px-3 py-2 border w-[200px] border-gray-300 rounded-md text-sm"
+            value={selectedCourseNumber}
+            onChange={(e) => setSelectedCourseNumber(e.target.value)}
+          >
+            <option value="">Select Course Number</option>
+            {selectedCourse &&
+              coursesData
+                .find((course) => course.id === selectedCourse)
+                ?.classes &&
+              Object.keys(
+                coursesData.find((course) => course.id === selectedCourse).classes
+              ).map((classNum) => (
+                <option key={classNum} value={classNum}>
+                  {classNum}
+                </option>
+              ))}
+          </select>
+
+          <select
+            className="px-3 py-2 border w-[200px] border-gray-300 rounded-md text-sm"
+            value={selectedProfessor}
+            onChange={(e) => setSelectedProfessor(e.target.value)}
+          >
+            <option value="">Select Professor</option>
+            {selectedCourse &&
+              selectedCourseNumber &&
+              coursesData
+                .find((course) => course.id === selectedCourse)
+                ?.classes[selectedCourseNumber]?.professor &&
+              Object.values(
+                coursesData
+                  .find((course) => course.id === selectedCourse)
+                  .classes[selectedCourseNumber].professor
+              ).map((prof) => (
+                <option key={prof.professorID} value={prof.professorID}>
+                  {prof.professorName}
+                </option>
+              ))}
+          </select>
+
+          <button
+            className="px-4 py-2 bg-ChicagoBlue text-white rounded-md"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
         </div>
       </div>
     </>
