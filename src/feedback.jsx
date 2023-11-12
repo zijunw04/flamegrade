@@ -133,7 +133,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
           {/* Attachment input field */}
-          <div className='flex justify-between gap-10 items-center flex-wrap'>
+          <div className='flex justify-center sm:justify-between gap-10 items-center flex-wrap'>
           <div>
             <label htmlFor="attachment" className="block mb-2 text-sm font-medium text-ChicagoBlue">
               Attachment
