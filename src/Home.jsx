@@ -12,19 +12,28 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    if (selectedCourse && selectedCourseNumber && selectedProfessor) {
-      const link = `/courses/${selectedCourse}/${selectedCourseNumber}/${selectedProfessor}`;
-      navigate(link);
-    } else {
-      alert("Please select all options");
+    let link = "/courses";
+
+    if (selectedCourse) {
+      link += `/${selectedCourse}`;
     }
+
+    if (selectedCourseNumber) {
+      link += `/${selectedCourseNumber}`;
+    }
+
+    if (selectedProfessor) {
+      link += `/${selectedProfessor}`;
+    }
+
+    navigate(link);
   };
 
   return (
     <>
-      <Hero/>
-      <Introduction/>
-      <NewStudentPop/>
+      <Hero />
+      <Introduction />
+      <NewStudentPop />
 
       <div className="w-full px-[20%] p-6 flex flex-col items-center mb-9 ">
         <h2 className="text-center text-3xl text-ChicagoBlue">Quick Search</h2>

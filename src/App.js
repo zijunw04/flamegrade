@@ -9,6 +9,8 @@ import Footer from "./components/footer";
 import AllCourses from "./AllCourse";
 import GenEdCourses from "./gened";
 import ContactPage from "./feedback";
+import ProfessorsList from "./SearchProf";
+import ProfessorCourses from "./courseTaughtbyProf";
 
 const App = () => {
 
@@ -22,6 +24,8 @@ const App = () => {
           <Route path="/courses/:id" element={<Courses />} />
           <Route path="/courses/:id/:classNum" element={<Professors />} />
           <Route path="/courses/:id/:classNum/:professorID" element={<ProfGrade />} />
+          <Route path="/professors" element={<ProfessorsList/>} />
+          <Route path="/professors/:professorID" element={<ProfessorCourses />} />
           <Route path="/courses" element={<AllCourses />} />
           <Route path="/gened" element={<GenEdCourses />} />
           <Route path="/feedback" element={<ContactPage />} />

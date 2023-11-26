@@ -27,16 +27,17 @@ export default function Header() {
           <div className="flex flex-col justify-start gap-9 mt-10">
             <a href="/" className={`w-[200px] text-xl block py-2 opacity-0 hover:underline hover:animate-pulse   transform translate-y-2 transition duration-300 delay-[200ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Home</a>
             <a href="/courses" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[400ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>All Courses</a>
-            <a href="/gened" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[600ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Gen Ed Courses</a>
-            <a href="/feedback" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[800ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Feedback</a>
+            <a href="/professors" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[600ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Professors</a>
+            <a href="/gened" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 delay-[800ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Gen Ed Courses</a>
+            <a href="/feedback" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 transition duration-300 2delay-[1000ms] ease-in-out ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Feedback</a>
           </div>
         </div>
       </div>
 
       <div className="flex-grow lg:flex hidden items-center justify-center">
         <a href="https://uic.edu" target="_blanks" className="flex text-center items-center">
-          <img src="https://chicago.medicine.uic.edu/wp-content/uploads/2018/04/CAMP.CIRC_.LG_.WHT_.png" alt="" className="h-[54px] w-[54px] mt-[2px]"></img>
-          <p className="text-UICWhite font-sans font-normal ml-2">University of <p className="font-bold">Illinois Chicago</p></p>
+          
+          <p className="text-UICWhite font-sans font-normal ml-2">University of <p className="font-bold text-2xl">Illinois Chicago</p></p>
         </a>
       </div>
 
