@@ -13,7 +13,7 @@ export default function Footer() {
                     <li>
                         <a href="https://www.ratemyprofessors.com/" target="_blanks" className="mr-4 hover:underline md:mr-6 ">RateMyProfessor</a>
                         <a href="https://uic.collegescheduler.com/entry" target="_blanks" className="mr-4 hover:underline md:mr-6 ">Register</a>
-                        <a href="/contact" target="_blanks" className="mr-4 hover:underline md:mr-6 ">Contact</a>
+                        <a href="/feedback" className="mr-4 hover:underline md:mr-6 ">Contact</a>
                     </li>
                 </ul>
             </div>

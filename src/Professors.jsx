@@ -43,5 +43,3 @@ const Professors = () => {
 
 export default Professors;
 
-
-//{`/images/${professors[professorKey].professorPhoto}.png`}

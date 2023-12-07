@@ -37,7 +37,7 @@ const ProfessorCourses = () => {
                   <p className="font-bold">{classNum}</p>
                 </Link>
                 <p>{className}</p>
-                {/* You can add more details here if needed */}
+              
               </div>
             ))}
           </div>

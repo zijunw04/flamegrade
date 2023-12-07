@@ -75,7 +75,7 @@ const GenEdCourses = () => {
           <div className="w-full text-center items-center">
             <a href="https://catalog.uic.edu/ucat/degree-programs/general-education/#text" target="_blanks" className="text-2xl text-ChicagoBlue hover:underline">General Education Courses</a>
           </div>
-          {/* Dropdown for selecting categories */}
+
           <div className="w-full text-center flex justify-center gap-5 items-center flex-wrap">
             <label htmlFor="category" className="text-lg font-semibold">
               Select Category:
@@ -94,7 +94,7 @@ const GenEdCourses = () => {
               ))}
             </select>
           </div>
-          {/* Dropdown for sorting by GPA */}
+
           <div className="w-full text-center  flex justify-center gap-5 items-center flex-wrap">
             <label htmlFor="sortOrder" className="text-lg font-semibold">
               Sort Classes:
@@ -124,7 +124,7 @@ const GenEdCourses = () => {
               className="p-2 border rounded w-full max-w-[400px]"
             />
           </div>
-          {/* Display courses in a grid */}
+          
           <div className="w-full mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCourses.map((course) => {
 

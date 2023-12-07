@@ -13,7 +13,7 @@ const AllCourses = () => {
     );
   });
 
-  const displayedCourses = filteredCourses.slice(0); // Limit to first 10 items
+  const displayedCourses = filteredCourses.slice(0); 
 
   return (
     <>
