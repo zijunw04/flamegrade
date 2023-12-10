@@ -12,17 +12,16 @@ export default function Header() {
   };
 
   return (
-    <div className={`w-full items-center grid lg:grid-cols-3 grid-cols-2 p-5 bg-UICRed z-10 relative ${menuOpen ? '' : 'overflow-hidden'}`}>
+    <div className={`w-full items-center grid lg:grid-cols-3 grid-cols-2 p-5 bg-UICRed z-10 relative  ${menuOpen ? '' : 'overflow-hidden'}`}>
       {menuOpen && <div className="fixed inset-0 bg-black backdrop-blur-lg opacity-50 z-20" onClick={closeMenu}></div>}
 
-      <div className="flex items-center justify-start relative z-30">
+      <div className="flex items-center justify-start relative">
         <a href="/" className="text-xl text-UICWhite">
           FlameGrades
         </a>
 
         <div
-          className={`flex flex-col fixed top-0 right-0 h-full w-[70%] lg:w-[30%] sm:w-[35%] bg-UICRed text-white shadow-lg px-4 transform origin-right transition-transform ${menuOpen ? 'opacity-100 translate-x-[0%] transition-all' : 'opacity-0 translate-x-[100%] transition-all flex'}`}
-          style={{ backdropFilter: menuOpen ? 'blur(8px)' : 'none' }}
+          className={`z-30 flex flex-col fixed top-0 right-0 h-full w-[70%] lg:w-[30%] sm:w-[35%] bg-UICRed text-white shadow-lg px-4 transform origin-right transition-transform ${menuOpen ? 'opacity-100 translate-x-[0%] transition-all' : 'opacity-0 translate-x-[100%]  transition-all flex '}`}
         >
           <div className="w-full flex justify-center text-center lg:text-2xl text-xl mt-8">
             <h1 onClick={closeMenu} className="cursor-pointer hover:scale-110">Flame Grades &times;</h1>
@@ -37,7 +36,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex-grow lg:flex hidden items-center justify-center">
+      <div className="flex-grow lg:flex hidden items-center justify-center ">
         <a href="https://uic.edu" target="_blank" rel="noopener noreferrer" className="flex text-center items-center">
           <p className="text-UICWhite font-sans font-normal ml-2">University of <p className="font-bold text-2xl">Illinois Chicago</p></p>
         </a>
