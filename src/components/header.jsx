@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <div className={`w-full items-center grid lg:grid-cols-3 grid-cols-2 p-5 bg-UICRed z-10 relative ${menuOpen ? 'overflow-hidden' : ''}`}>
+    <div className={`w-full items-center grid lg:grid-cols-3 grid-cols-2 p-5 bg-UICRed z-10 relative ${menuOpen ? '' : 'overflow-hidden'}`}>
       {menuOpen && <div className="fixed inset-0 bg-black backdrop-blur-lg opacity-50 z-20" onClick={closeMenu}></div>}
 
       <div className="flex items-center justify-start relative z-30">
