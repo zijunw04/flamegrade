@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <div className={`w-full items-center grid grid-cols-3 p-5 bg-UICRed z-10 relative ${menuOpen ? 'overflow-hidden' : ''}`}>
+    <div className={`w-full items-center grid lg:grid-cols-3 grid-cols-2 p-5 bg-UICRed z-10 relative ${menuOpen ? 'overflow-hidden' : ''}`}>
       {menuOpen && <div className="fixed inset-0 bg-black backdrop-blur-lg opacity-50 z-20" onClick={closeMenu}></div>}
 
       <div className="flex items-center justify-start relative z-30">
@@ -27,7 +27,7 @@ export default function Header() {
           <div className="w-full flex justify-center text-center lg:text-2xl text-xl mt-8">
             <h1 onClick={closeMenu} className="cursor-pointer hover:scale-110">Flame Grades &times;</h1>
           </div>
-          <div className="flex flex-col justify-start gap-9 mt-10">
+          <div className="flex z-30 flex-col justify-start gap-9 mt-10">
             <a href="/" className={`w-[200px] text-xl block py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2  ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Home</a>
             <a href="/courses" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>All Courses</a>
             <a href="/professors" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Professors</a>
