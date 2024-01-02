@@ -16,7 +16,7 @@ export default function Introduction() {
           </div>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Contribution</span>
-            <span className=" text-base text-black  ">This is a open source project by <a href="https://www.floatsink.me" target="_blanks" className="text-ChicagoBlue underline">Zi Jun Wang</a>. If you are interested in contributing to the advancement of this project, you are encouraged to explore the  <a href="https://github.com/zijunw04/flamegrade" target="_blanks" className="text-ChicagoBlue underline">repository here</a>. I would love to hear a feedback from those who use this website! <a href="/feedback" className="text-ChicagoBlue underline">Submit a Feedback</a></span>
+            <span className=" text-base text-black  ">This is a open source project by <a href="https://www.zijunw.com/" target="_blanks" className="text-ChicagoBlue underline">Zi Jun Wang</a>. If you are interested in contributing to the advancement of this project, you are encouraged to explore the  <a href="https://github.com/zijunw04/flamegrade" target="_blanks" className="text-ChicagoBlue underline">repository here</a>. I would love to hear a feedback from those who use this website! <a href="/feedback" className="text-ChicagoBlue underline">Submit a Feedback</a></span>
           </div>
 
     </div>
