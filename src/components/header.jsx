@@ -32,7 +32,7 @@ export default function Header() {
             <a href="/professors" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Professors</a>
             <a href="/gened" className={`block text-xl py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2 ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Gen Ed Courses</a>
             <a href="/feedback" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2  ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>Feedback</a>
-            <a href="https://uic-blackboard-extension.vercel.app/" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2  ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>UIC BB Extension</a>
+            <a href="https://uic-blackboard-extension.vercel.app/" target="_blanks" className={`block text-xl  py-2 opacity-0 hover:underline hover:animate-pulse transform translate-y-2  ${menuOpen ? 'opacity-100 translate-y-0' : ''}`}>UIC BB Extension</a>
           </div>
         </div>
       </div>
