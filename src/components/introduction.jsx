@@ -12,7 +12,7 @@ export default function Introduction() {
           </div>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Data</span>
-            <span className=" text-base text-black  ">Website's data is provided by UIC's Grade Distribution data. You can access the database <a className="text-ChicagoBlue underline" target="_blanks" href="https://oir.uic.edu/data/student-data/grade-distribution/">online</a>. Currently, the website's data is ONLY available for the year Fall 2015 - Spring 2023. Some professor or their data may not be shown &#40;such as new prof / not within data year / pass and fail&#41; </span>
+            <span className=" text-base text-black  ">Website's data is provided by UIC's Grade Distribution data. You can access the database <a className="text-ChicagoBlue underline" target="_blanks" href="https://oir.uic.edu/data/student-data/grade-distribution/">online</a>. Currently, the website's data is ONLY available for the year Fall 2015 - Fall 2023. Some professor or their data may not be shown &#40;such as new prof / not within data year / pass and fail&#41; </span>
           </div>
           <div className="w-full mt-2 px-[20%] flex flex-wrap flex-col">
             <span className=" text-2xl font-semibold">Contribution</span>

@@ -14,7 +14,7 @@ const ProfessorGrade = () => {
   const professor = course.classes[classNum].professor[professorID];
 
   return (
-    <div className="w-full min-h-screen  overflow-hidden px-[20%] ">
+    <div className="w-full min-h-screen  overflow-hidden px-[20%] pb-10 ">
       <div className="mt-20 flex border justify-center min-h-screen py-6  px-6 flex-wrap">
         <div className="mt-4 flex py-5   ">
             <img alt="" className="border-UICBlue  border-8  rounded-3xl lg:w-[300px] lg:h-[300px] sm:w-[300px] sm:h-[300px] w-[150px] h-[150px] object-cover " src={`/images/professorPhoto/${professor.professorID}.png`}></img>
@@ -41,6 +41,12 @@ const ProfessorGrade = () => {
             </span>
             <span className="">
               F: {professor.FPercentage}
+            </span>
+            <span className="">
+              Pass: {professor.Pass} students
+            </span>
+            <span className="">
+              Fail: {professor.Fail} students
             </span>
             <span className="">
               Withdrew: {professor.WPercentage}
